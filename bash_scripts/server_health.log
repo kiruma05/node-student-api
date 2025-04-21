@@ -1,0 +1,31 @@
+2025-04-21 21:01:09 - CPU Usage: 100%
+2025-04-21 21:01:09 - Memory Usage: 84.57%
+2025-04-21 21:01:09 - Disk Usage: 56%
+2025-04-21 21:01:09 - WARNING: Web Server (Apache) is not running!
+2025-04-21 21:01:09 - Web Server Status: Not Running
+2025-04-21 21:01:09 - API /students Status: 200
+2025-04-21 21:01:09 - API /subjects Status: 200
+2025-04-21 21:01:09 - Health check completed.
+2025-04-21 21:06:02 - CPU Usage: 100%
+2025-04-21 21:06:02 - Memory Usage: 86.76%
+2025-04-21 21:06:02 - Disk Usage: 56%
+2025-04-21 21:06:02 - WARNING: Web Server (Apache) is not running!
+2025-04-21 21:06:02 - Web Server Status: Not Running
+2025-04-21 21:06:02 - API /students Status: 200
+2025-04-21 21:06:02 - API /subjects Status: 200
+2025-04-21 21:06:02 - Health check completed.
+2025-04-21 21:15:41 - CPU Usage: 100%
+2025-04-21 21:15:41 - Memory Usage: 85.78%
+2025-04-21 21:15:41 - Disk Usage: 56%
+2025-04-21 21:15:41 - Web Server Status: Running
+2025-04-21 21:15:41 - API /students Status: 404
+2025-04-21 21:15:41 - API /subjects Status: 404
+2025-04-21 21:15:41 - WARNING: One or more API endpoints returned a non-200 status!
+2025-04-21 21:15:41 - Health check completed.
+2025-04-21 21:42:49 - CPU Usage: 100%
+2025-04-21 21:42:49 - Memory Usage: 84.90%
+2025-04-21 21:42:49 - Disk Usage: 56%
+2025-04-21 21:42:49 - Web Server Status: Running
+2025-04-21 21:42:49 - API /students Status: 200
+2025-04-21 21:42:49 - API /subjects Status: 200
+2025-04-21 21:42:49 - Health check completed.

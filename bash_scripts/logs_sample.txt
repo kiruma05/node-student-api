@@ -1,0 +1,11 @@
+# Sample log entries from server_health.log
+2025-04-21 21:01:09 - CPU Usage: 100%
+2025-04-21 21:01:09 - Memory Usage: 84.57%
+
+# Sample log entries from backup.log
+2025-04-21 21:57:34 - API files backed up successfully
+2025-04-21 21:57:34 - Database backed up successfully
+
+# Sample log entries from update.log
+2025-04-21 22:08:03 - Ubuntu packages updated.
+2025-04-21 22:08:04 - Git pull successful.
