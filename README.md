@@ -150,3 +150,109 @@ The API exposes two endpoints:
 * API Endpoints:
     * `http://13.61.27.17/students`
     * `http://13.61.27.17/subjects`
+
+
+
+
+
+
+
+# CS 421 - Assignment 2: Server Management Scripts
+
+## Script Descriptions
+
+This assignment includes the following Bash scripts for automating server management tasks:
+
+### 1. health_check.sh
+
+This script monitors the server's health by checking CPU usage, memory usage, disk space, and the status of the web server (Apache). It also tests the API endpoints (/students and /subjects) to ensure they are responding with a 200 OK status. The script logs all results to `/home/ubuntu/bash_scripts/server_health.log`. If any check fails, a warning is logged.
+
+### 2. backup_api.sh
+
+This script creates a backup of the API project directory and the MySQL database. The API directory is backed up to `/home/ubuntu/backups/api_backup_$(date +%F).tar.gz`, and the database is exported to `/home/ubuntu/backups/db_backup_$(date +%F).sql`.  It automatically deletes backups older than 7 days.  Logs of the backup process are written to `/home/ubuntu/bash_scripts/backup.log`.
+
+### 3. update_server.sh
+
+This script automates the process of updating the server and the API. It updates the Ubuntu package list and upgrades installed packages, pulls the latest changes from the Assignment 1 GitHub repository, and restarts the web server (Apache) to apply the updates. The script logs the update process to `/home/ubuntu/bash_scripts/update.log`. If the `git pull` command fails, the script logs an error and exits without restarting the web server.
+
+
+## Setup and Usage Instructions
+
+1.  **Clone the Repository:**
+
+    Clone this repository to your AWS Ubuntu server:
+
+    ```bash
+    git clone <your_repository_url>
+    ```
+
+    Replace `<your_repository_url>` with the actual URL of your repository.
+
+2.  **Navigate to the `bash_scripts` Directory:**
+
+    ```bash
+    cd bash_scripts
+    ```
+
+3.  **Set Execute Permissions:**
+
+    Make the scripts executable:
+
+    ```bash
+    chmod +x health_check.sh
+    chmod +x backup_api.sh
+    chmod +x update_server.sh
+    ```
+
+4.  **Run the Scripts:**
+
+    Execute the scripts from the command line:
+
+    ```bash
+    ./health_check.sh
+    ./backup_api.sh
+    ./update_server.sh
+    ```
+
+5.  **View Log Files:**
+
+    The log files are located in the `bash_scripts` directory:
+
+    ```bash
+    cat server_health.log
+    cat backup.log
+    cat update.log
+    ```
+
+6.  **Cron Setup (Automated Execution):**
+
+    To automate the execution of the scripts, use `cron`.
+
+    * Edit the crontab:
+
+        ```bash
+        crontab -e
+        ```
+
+    * Add the following lines to schedule the scripts:
+
+        ```cron
+        0 */6   * * * /home/ubuntu/bash_scripts/health_check.sh
+        0 2     * * * /home/ubuntu/bash_scripts/backup_api.sh
+        0 3     */3 * * /home/ubuntu/bash_scripts/update_server.sh
+        ```
+
+    * Save the crontab.
+
+
+## Dependencies
+
+The scripts require the following dependencies:
+
+* **Bash:** The scripts are written in Bash, which is the default shell on most Linux systems.
+* **curl:** Used in `health_check.sh` to test the API endpoints.
+* **MySQL Client (mysqldump):** Used in `backup_api.sh` to export the MySQL database.  If you are using a different database, you will need the appropriate client tools.
+* **Git:** Used in `update_server.sh` to pull the latest changes from the repository.
+* **Apache2 (or Nginx):** The web server that hosts the API.  The `update_server.sh` script restarts this service.
+* **Ubuntu:** The scripts are designed to run on Ubuntu.
+* **cron:** For scheduling the automatic execution of the scripts.
