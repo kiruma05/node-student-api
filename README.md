@@ -256,3 +256,29 @@ The scripts require the following dependencies:
 * **Apache2 (or Nginx):** The web server that hosts the API.  The `update_server.sh` script restarts this service.
 * **Ubuntu:** The scripts are designed to run on Ubuntu.
 * **cron:** For scheduling the automatic execution of the scripts.
+
+
+
+# Node Student API 
+
+This project is a simple **student management API** built with **Node.js** and **MySQL**, containerized using **Docker**.
+
+##  Features
+- Retrieve student records (`/students`)
+- Fetch subjects related to Software Engineering (`/subjects`)
+- MySQL database integration
+- Deployed on AWS using Docker
+
+-GitHub Repository: https://github.com/kiruma05/node-student-api
+- API Public URL: http://ec2-13-61-27-17.eu-north-1.compute.amazonaws.com:8080/
+- Docker Hub Repository: https://hub.docker.com/r/kiruma05/node-student-api
+
+---
+
+## 🔧 Setup & Deployment
+
+### 1️⃣ **Clone Repository**
+```sh
+git clone https://github.com/your-github-username/node-student-api.git
+cd node-student-api
+

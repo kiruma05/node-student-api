@@ -1,0 +1,10 @@
+docker-compose logs
+WARN[0000] /home/ubuntu/node-student-api/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+db-1  | 2025-04-26 17:07:33+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.
+db-1  | 2025-04-26 17:07:34+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db-1  | 2025-04-26 17:07:34+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.
+db-1  | 2025-04-26 17:07:34+00:00 [ERROR] [Entrypoint]: MYSQL_USER="root", MYSQL_USER and MYSQL_PASSWORD are for configuring a regular user and cannot be used for the root user
+db-1  |     Remove MYSQL_USER="root" and use one of the following to control the root user password:
+db-1  |     - MYSQL_ROOT_PASSWORD
+db-1  |     - MYSQL_ALLOW_EMPTY_PASSWORD
+db-1  |     - MYSQL_RANDOM_ROOT_PASSWORD
