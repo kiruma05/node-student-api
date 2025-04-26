@@ -148,7 +148,7 @@ The API exposes two endpoints:
 
 * GitHub Repository URL: https://github.com/kiruma05/node-student-api
 * API Endpoints:
-    * `http://13.61.27.17/students`
+    *` `http://13.61.27.17/students
     * `http://13.61.27.17/subjects`
 
 
