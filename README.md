@@ -270,7 +270,9 @@ This project is a simple **student management API** built with **Node.js** and *
 - Deployed on AWS using Docker
 
 -GitHub Repository: https://github.com/kiruma05/node-student-api
-- API Public URL: http://ec2-13-61-27-17.eu-north-1.compute.amazonaws.com:8080/
+- API Public URL: http://ec2-13-61-27-17.eu-north-1.compute.amazonaws.com:3000/
+- API for students : http://ec2-13-61-27-17.eu-north-1.compute.amazonaws.com:3000/students
+- API for subjects : http://ec2-13-61-27-17.eu-north-1.compute.amazonaws.com:3000/subjects
 - Docker Hub Repository: https://hub.docker.com/r/kiruma05/node-student-api
 
 ---
@@ -279,6 +281,6 @@ This project is a simple **student management API** built with **Node.js** and *
 
 ### 1️⃣ **Clone Repository**
 ```sh
-git clone https://github.com/your-github-username/node-student-api.git
+git clone https://github.com/kiruma05/node-student-api.git
 cd node-student-api
 
